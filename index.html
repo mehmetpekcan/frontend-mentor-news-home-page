@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <link href="./reset.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="Site logo" />
+        </div>
+        <nav class="desktop-nav">
+          <a href="#">Home</a>
+          <a href="#">New</a>
+          <a href="#">Popular</a>
+          <a href="#">Trending</a>
+          <a href="#">Categories</a>
+        </nav>
+        <img class="hamburger-menu-open" src="./assets/images/icon-menu.svg" />
+      </header>
+      <main>
+        <section id="featured-new">
+          <div class="featured-new-image">
+            <img
+              src="./assets/images/image-web-3-desktop.jpg"
+              alt="The Bright Future of Web 3.0?"
+            />
+          </div>
+          <div class="featured-new-body">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="featured-new-description">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button>Read more</button>
+            </div>
+          </div>
+        </section>
+        <section id="news-sidebar">
+          <h2>New</h2>
+          <div class="new-item">
+            <h4>New Hydrogen VS Electric</h4>
+            <p>Cars Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="new-item">
+            <h4>The Downsides of AI Artistry</h4>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="new-item">
+            <h4>Is VC Funding Drying Up?</h4>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </section>
+        <section id="news-bottom">
+          <div class="new-bottom-item">
+            <div class="new-image">
+              <img src="./assets/images/image-gaming-growth.jpg" />
+            </div>
+            <div class="new-body">
+              <p class="new-body-number">01</p>
+              <h3>Reviving Retro PCs</h3>
+              <p class="new-body-description">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="new-bottom-item">
+            <div class="new-image">
+              <img src="./assets/images/image-top-laptops.jpg" />
+            </div>
+            <div class="new-body">
+              <p class="new-body-number">02</p>
+              <h3>Top 10 Laptops of 2022</h3>
+              <p class="new-body-description">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+          <div class="new-bottom-item">
+            <div class="new-image">
+              <img src="./assets/images/image-retro-pcs.jpg" />
+            </div>
+            <div class="new-body">
+              <p class="new-body-number">03</p>
+              <h3>The Growth of Gaming</h3>
+              <p class="new-body-description">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu-wrapper">
+        <div class="overlay"></div>
+        <div class="mobile-nav-wrapper">
+          <img class="close-icon" src="./assets/images/icon-menu-close.svg" />
+          <nav class="mobile-nav">
+            <a href="#">Home</a>
+            <a href="#">New</a>
+            <a href="#">Popular</a>
+            <a href="#">Trending</a>
+            <a href="#">Categories</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+/* Soft orange: hsl(35, 77%, 62%)
+Soft red: hsl(5, 85%, 63%)
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%) */
+
+:root {
+  --soft-red: hsl(5, 85%, 63%);
+  --soft-orange: hsl(35, 77%, 62%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --white: hsl(36, 100%, 99%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.container {
+  margin-top: 72px;
+  max-width: 1024px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header  */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger-menu-wrapper {
+  display: none;
+}
+
+header .hamburger-menu-open {
+  display: none;
+}
+
+header .desktop-nav {
+  display: flex;
+  gap: 36px;
+}
+
+header .desktop-nav a {
+  color: var(--dark-grayish-blue);
+}
+
+/* Main */
+
+main {
+  gap: 24px;
+  margin-top: 72px;
+  display: grid;
+}
+
+/* Featured New */
+
+section#featured-new h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  flex: 1;
+}
+
+.featured-new-body {
+  margin-top: 24px;
+}
+
+.featured-new-description {
+  flex: 1;
+}
+
+.featured-new-description p {
+  color: var(--dark-grayish-blue);
+}
+
+.featured-new-description button {
+  padding: 12px 24px;
+  color: var(--white);
+  background-color: var(--soft-red);
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+  margin-top: 16px;
+}
+
+/* News Sidebar */
+
+section#news-sidebar {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  padding: 16px;
+}
+
+#news-sidebar .new-item:not(:last-child) {
+  border-bottom: 1px solid var(--grayish-blue);
+  padding-bottom: 16px;
+}
+
+#news-sidebar .new-item:not(:nth-child(2)) {
+  padding-top: 16px;
+}
+
+#news-sidebar h2 {
+  color: var(--soft-orange);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#news-sidebar h4 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+#news-sidebar p {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* News Bottom */
+
+section#news-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+#news-bottom .new-bottom-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.new-body-number {
+  font-size: 24px;
+  color: var(--grayish-blue);
+  font-weight: 800;
+}
+
+.new-bottom-item h3 {
+  font-weight: 700;
+}
+
+.new-body-description {
+  font-size: 12px;
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 500px) {
+  main {
+    grid-template-areas:
+      "featuredNew featuredNew newsSidebar"
+      "newsBottom newsBottom newsBottom";
+  }
+
+  #featured-new {
+    grid-area: featuredNew;
+  }
+
+  section#news-sidebar {
+    grid-area: newsSidebar;
+  }
+
+  section#news-bottom {
+    grid-area: newsBottom;
+  }
+
+  .featured-new-body {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .featured-new-description {
+    margin-top: 12px;
+  }
+
+  #news-bottom {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .new-image {
+    flex: 1;
+  }
+
+  .new-body {
+    flex: 2;
+  }
+
+  header .desktop-nav {
+    display: none;
+  }
+
+  header .hamburger-menu-open {
+    display: block;
+  }
+
+  .hamburger-menu-wrapper {
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 100%;
+    transition: left 250ms ease, opacity 250ms ease;
+  }
+
+  .open {
+    opacity: 100%;
+    left: 0;
+  }
+
+  .overlay {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .mobile-nav-wrapper {
+    background-color: var(--white);
+    flex: 3;
+  }
+
+  .mobile-nav {
+    margin-top: 72px;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mobile-nav a {
+    color: var(--very-dark-blue);
+  }
+
+  .close-icon {
+    margin-left: auto;
+    margin-top: 24px;
+    margin-right: 24px;
+  }
+}
